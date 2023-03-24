@@ -9081,10 +9081,7 @@ textarea.form-control {
   background: #000000;
   padding: 7em 0;
   z-index: 0; 
-  position: absolute;
-  bottom: 0; 
-  left: 0; 
-  right:0}
+  margin-top: auto;}
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
