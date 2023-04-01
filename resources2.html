@@ -125,10 +125,75 @@
 	    </div>
 	  </nav>
 
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Sidebar Column -->
+        <div class="col-md-3" id="tg-sb-sidebar">
+        
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  <li>
+    <a title="Information" href="#">Information</a>
+      <ul>
+        <li><a title="About Me" href="about-me.html">About Me</a></li>
+        <li><a title="My CV" href="about-me.html">My CV</a></li>
+        <li><a title="Licenses" href="licenses.html">Licenses</a></li>
+        <li><a title="Acknowledgements" href="these-people-rock.html">Acknowledgements</a></li>
+      </ul>
+  </li>
+  <li>
+    <a title="Research Guides" href="#">Research Guides</a>
+      <ul>
+        <li><a title="UNIX Guide" href="UNIXguide-introduction.html">UNIX Guide</a></li>
+        <li><a title="AMBER Guide" href="AMBERguide-introduction.html">AMBER Guide</a></li>
+        <li><a title="Simulation Analysis Guide" href="Analysisguide-introduction.html">Simulation Analysis Guide</a></li>
+        <li><a title="R Guide" href="Rguide-introduction.html">R Guide</a></li>
+        <li><a title="Other Programs and Lab Skills" href="Otherguide-introduction.html">Other Programs and Lab Skills</a></li>
+      </ul>
+  </li>
+  <li>
+    <a title="Thinking About Grad School?" href="#">Thinking About Grad School?</a>
+      <ul>
+        <li><a title="Overview" href="grad-school.html">Overview</a></li>
+        <li><a title="Questions to Ask Yourself" href="what-to-ask-for-grad-school.html">Questions to Ask Yourself</a></li>
+        <li><a title="Application Resources" href="grad-prof-app-resources.html">Application Resources</a></li>
+        <li><a title="Some Funding Resources" href="funding-school.html">Some Funding Resources</a></li>
+      </ul>
+   </li>
+
+  <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Over the course of my career, I have compiled notes and resources on many different topics.</h1>
+</div>
+
+
+
+
+
     <section class="ftco-section">
     <div class="container">
     	<div class="row">
-    		<div class="col-md-3">
+    		<div class="col-md-9">
                  <div class="sidenav">
 						<button class="dropdown-btn">Physical Chemistry 
 							<i class="fa fa-caret-down"></i>
