@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENEWIZ Guardian Quiz</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The GENEWIZ Guardian Personality Quiz</h1>
+    <p>Answer these 10 questions to discover your inner Guardian of the Genome!</p>
+
+    <form id="quizForm">
+
+        <div class="question-block">
+            <p class="question-text">1. When faced with a tricky situation, people often rely on your:</p>
+            <label><input type="radio" name="q1" value="A" required> A. Ability to bounce back quickly, perhaps even stronger than before.</label>
+            <label><input type="radio" name="q1" value="B"> B. Dependability and knack for getting things done efficiently and reliably.</label>
+            <label><input type="radio" name="q1" value="C"> C. Unique talents or specialized knowledge that others might not possess.</label>
+            <label><input type="radio" name="q1" value="D"> D. Sharp intuition and skill in navigating complex dynamics or situations.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">2. You find yourself most naturally fascinated by:</p>
+            <label><input type="radio" name="q2" value="A" required> A. How people (or animals!) learn, communicate, and understand one another.</label>
+            <label><input type="radio" name="q2" value="B"> B. The underlying rules, codes, or patterns that govern systems (like language, music, logic, or nature).</label>
+            <label><input type="radio" name="q2" value="C"> C. Finding practical ways to help people, fix problems, or improve well-being in your community.</label>
+            <label><input type="radio" name="q2" value="D"> D. Watching things grow and develop over time – whether it's a plant, a skill, a project, or a person.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">3. In group activities or when working towards a shared goal, you prefer to:</p>
+            <label><input type="radio" name="q3" value="A" required> A. Work closely with others, fostering collaboration and a strong team spirit.</label>
+            <label><input type="radio" name="q3" value="B"> B. Focus intently on your specific part, diving deep into the necessary details independently.</label>
+            <label><input type="radio" name="q3" value="C"> C. Be flexible and adaptable, willing to fill different roles to ensure everything works smoothly.</label>
+            <label><input type="radio" name="q3" value="D"> D. Follow a clear plan and contribute consistently, producing reliable and predictable results.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">4. If friends described your key strength within the group, they might say it's your:</p>
+            <label><input type="radio" name="q4" value="A" required> A. Talent for simplifying complex ideas or making things easy to understand.</label>
+            <label><input type="radio" name="q4" value="B"> B. Relatability and ability to connect easily with many different types of people.</label>
+            <label><input type="radio" name="q4" value="C"> C. Ability to offer a special skill or create something unique that others find valuable.</label>
+            <label><input type="radio" name="q4" value="D"> D. Precision and knack for delivering exactly what's needed, right when it's needed.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">5. You feel the greatest sense of personal satisfaction after:</p>
+            <label><input type="radio" name="q5" value="A" required> A. Helping something or someone improve, grow stronger, or become more capable.</label>
+            <label><input type="radio" name="q5" value="B"> B. Finally understanding the fundamental reason *why* something works the way it does.</label>
+            <label><input type="radio" name="q5" value="C"> C. Mastering a complex skill involving coordination, communication, or navigation (e.g., learning a dance, language, or navigating a new city).</label>
+            <label><input type="radio" name="q5" value="D"> D. Successfully protecting something important or helping someone recover from a setback.</label>
+        </div>
+
+         <div class="question-block">
+            <p class="question-text">6. When you're working on any kind of project, you naturally tend to focus on:</p>
+            <label><input type="radio" name="q6" value="A" required> A. The tiny, intricate details that make up the whole picture.</label>
+            <label><input type="radio" name="q6" value="B"> B. The overall structure and how all the individual parts fit together in the grand scheme.</label>
+            <label><input type="radio" name="q6" value="C"> C. The underlying logic, code, or essential components driving the system.</label>
+            <label><input type="radio" name="q6" value="D"> D. Making specific, targeted improvements or refinements to something that already exists.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">7. You feel most comfortable and energized in an environment that is:</p>
+            <label><input type="radio" name="q7" value="A" required> A. Open and natural, allowing for exploration, observation, and sensing your surroundings.</label>
+            <label><input type="radio" name="q7" value="B"> B. Socially vibrant and highly collaborative, with plenty of interaction and teamwork.</label>
+            <label><input type="radio" name="q7" value="C"> C. Structured and organized, prioritizing efficient processes and clear objectives.</label>
+            <label><input type="radio" name="q7" value="D"> D. Quiet and analytical, allowing for deep concentration, focus, and examination of information.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">8. When you encounter a brand new gadget, app, or method for doing something, your first instinct is often to:</p>
+            <label><input type="radio" name="q8" value="A" required> A. Try it out immediately to see what practical problems it might solve or how it could be useful day-to-day.</label>
+            <label><input type="radio" name="q8" value="B"> B. Compare it carefully to the tools or methods you already know and use, weighing the pros and cons.</label>
+            <label><input type="radio" name="q8" value="C"> C. Figure out exactly *how* and *why* it works on a basic, fundamental level before fully embracing it.</label>
+            <label><input type="radio" name="q8" value="D"> D. Think about how it could enhance or complement your existing skills or natural ways of approaching tasks.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">9. In terms of time, your attention is most naturally captured by:</p>
+            <label><input type="radio" name="q9" value="A" required> A. Tasks that offer quick wins, immediate feedback, or rapid cycles of activity.</label>
+            <label><input type="radio" name="q9" value="B"> B. Long-term projects that involve gradual progress, development, and maturation over time.</label>
+            <label><input type="radio" name="q9" value="C"> C. Understanding historical context, how things have changed, or making comparisons across different eras.</label>
+            <label><input type="radio" name="q9" value="D"> D. Analyzing specific, dynamic interactions, sequences of events, or moments as they happen.</label>
+        </div>
+
+        <div class="question-block">
+            <p class="question-text">10. You typically find it easiest to learn something new by:</p>
+            <label><input type="radio" name="q10" value="A" required> A. Visualizing patterns, using diagrams or maps, or understanding spatial relationships.</label>
+            <label><input type="radio" name="q10" value="B"> B. Listening intently, repeating sequences aloud, or following clear auditory instructions.</label>
+            <label><input type="radio" name="q10" value="C"> C. Analyzing data, understanding the underlying logic or structure, or breaking it down systematically.</label>
+            <label><input type="radio" name="q10" value="D"> D. Getting hands-on, trying things out directly, engaging through practice and direct application.</label>
+        </div>
+
+        <div id="error-message" class="error" style="display: none;">Please answer all questions!</div>
+
+        <button type="button" onclick="calculateResult()">Reveal My Guardian!</button>
+
+    </form>
+
+    <div id="result" style="display: none;"></div>
+
+    <script>
+        const cardDescriptions = {
+            "Axolotl": "<strong>Axolotl (Ambystoma Mexicanum - Core Wizard):</strong> Like the amazing Axolotl, you're remarkably resilient and bounce back from anything! You have a deep interest in healing, regeneration, and maybe even possess the longest attention span (like their genome!).",
+            "E. Coli": "<strong>E. Coli (Escherichia Coli - Core Wizard):</strong> You're the powerhouse! Like E. Coli, the workhorse of molecular genetics, you're incredibly efficient, reliable, and essential for producing results and getting things done.",
+            "Llama": "<strong>Llama (Lama Glama - Core Wizard):</strong> You bring something unique and highly valuable to the team, just like the Llama's special nanobodies! You likely excel in collaborative settings and possess specialized skills that target problems others can't.",
+            "Rabbit": "<strong>Rabbit (Oryctolagus Cuniculus - Core Wizard):</strong> You're a key player in defense and development! Like the Rabbit, vital for antibody production, you likely have a talent for creating protective measures or contributing methodically to solutions.",
+            "Brown Bat": "<strong>Brown Bat (Myotis Lucifugus - Core Wizard):</strong> You navigate the world with unique senses! Like the Brown Bat using echolocation, you possess sharp intuition, excel at understanding complex environments, and integrate information in fascinating ways.",
+            "Pond Snail": "<strong>Pond Snail (Lymnaea Stagnalis - Signature Wizard):</strong> You appreciate the elegance of simplicity! Like the Pond Snail with its identifiable neurons, you have a knack for understanding complex functions by breaking them down to a fundamental, cellular level.",
+            "Zebra Finch": "<strong>Zebra Finch (Taeniopygia Guttata - Core/Signature Wizard):</strong> You're a keen learner and communicator! Like the Zebra Finch, a model for vocal learning and social behavior, you excel at observation, developing new skills, and understanding social dynamics.",
+            "Pigeon": "<strong>Pigeon (Columba Livia - Core Wizard):</strong> You have impressive cognitive abilities! Like the Pigeon, a model for learning, memory, and visual processing, you likely have a great capacity for understanding complex patterns and navigating challenges intelligently.",
+            "DNA": "<strong>DNA (Deoxyribonucleic Acid - Golden Wizard):</strong> You are fundamental! Like DNA, the blueprint of life, you focus on the core principles, the underlying structure, and the essential information that makes everything work. You're a building block!",
+            "RNA": "<strong>RNA (Ribonucleic Acid - Golden Wizard):</strong> You're the crucial messenger! Like RNA, linking DNA's instructions to protein production, you excel at translation, communication, and playing a central role in making things happen.",
+            "C. Elegans": "<strong>C. Elegans (Caenorhabditis Elegans - Core Wizard):</strong> You value precision and understanding systems from the ground up! Like C. Elegans, the first multicellular organism fully sequenced, you appreciate elegance in simplicity, detailed analysis, and understanding development.",
+            "Pufferfish": "<strong>Pufferfish (Fugu Rubripes - Core Wizard):</strong> You appreciate efficiency and comparative insights! Like the Pufferfish with its compact genome, you value concise information and understanding the bigger picture by comparing different systems.",
+            "AAV": "<strong>AAV (Adeno-Associated Virus - Signature Wizard):</strong> You're a vector for positive change! Like AAV, a key tool in gene therapy, you're adaptable, precise, and focused on delivering solutions and making targeted improvements.",
+            "Antibody": "<strong>Antibody (Immunoglobulin - Golden Wizard):</strong> You are a protector! Like an Antibody, recognizing and neutralizing threats, you have a strong sense of defense, protection, and contributing directly to health and well-being.",
+            "Dog": "<strong>Dog (Canis Lupus Familiaris - Signature Wizard):</strong> You're a loyal collaborator and translational thinker! Like our oldest companion, the Dog, you thrive in teams, build strong bonds, and have a knack for seeing parallels between different situations (like human and canine diseases).",
+            "Mouse": "<strong>Mouse (Mus Musculus - Core Wizard):</strong> You're relatable and adaptable! Like the Mouse, a common and relatable model for human biology, you're versatile, fit into many situations, and provide valuable insights due to your understanding of diverse systems.",
+            "Pig": "<strong>Pig (Sus Scrofa - Core Wizard):</strong> You're a robust and relatable problem-solver! Like the Pig, with similarities to human systems, you're great for tackling big challenges, work well in collaborative settings, and are key for developing practical, large-scale solutions.",
+            "African Clawed Frog": "<strong>African Clawed Frog (Xenopus Laevis - Signature Wizard):</strong> You're focused on development and the big picture! Like the African Clawed Frog, used to study gene function during development, you appreciate understanding growth from the beginning and how fundamental processes unfold.",
+            "Sea Urchin": "<strong>Sea Urchin (Sterechinus Neumayeri - Core Wizard):</strong> You're fascinated by the fundamentals of development and regulation! Like the Sea Urchin, a classic model for fertilization and cell development, you love understanding how things start and how complex systems are built and regulated.",
+            "Tomato": "<strong>Tomato (Solanum Lycopersicum - Core Wizard):</strong> You're all about improvement and resilience! Like the research being done on Tomatoes, you strive to enhance quality, taste, and robustness, making things better and more resistant to challenges.",
+            "Orange": "<strong>Orange (Citrus Sinensis - Core Wizard):</strong> You aim to improve quality and fight adversity! Like gene-editing studies in Oranges, you focus on enhancing desirable traits and building resistance, bringing zest and strength to your projects.",
+            "Chicken": "<strong>Chicken (Gallus Gallus - Signature Wizard):</strong> You have a unique and productive system! Like the Chicken, producing diverse antibodies in a distinct way, you offer methodical, valuable contributions and have your own effective way of generating results."
+        };
+
+        function calculateResult() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error-message');
+            resultDiv.style.display = 'none'; // Hide previous result
+            errorDiv.style.display = 'none'; // Hide previous error
+
+            // Check if all questions are answered
+            let allAnswered = true;
+            for (let i = 1; i <= 10; i++) {
+                if (!form.elements[`q${i}`].value) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+
+            if (!allAnswered) {
+                errorDiv.style.display = 'block';
+                return; // Stop calculation if not all answered
+            }
+
+            let scores = {
+                "Axolotl": 0, "E. Coli": 0, "Llama": 0, "Rabbit": 0, "Brown Bat": 0,
+                "Pond Snail": 0, "Zebra Finch": 0, "Pigeon": 0, "DNA": 0, "RNA": 0,
+                "C. Elegans": 0, "Pufferfish": 0, "AAV": 0, "Antibody": 0, "Dog": 0,
+                "Mouse": 0, "Pig": 0, "African Clawed Frog": 0, "Sea Urchin": 0,
+                "Tomato": 0, "Orange": 0, "Chicken": 0
+            };
+
+            const answers = {};
+            for (let i = 1; i <= 10; i++) {
+                answers[`q${i}`] = form.elements[`q${i}`].value;
+            }
+
+            // --- Scoring Logic ---
+            // Q1
+            if (answers.q1 === 'A') scores.Axolotl++;
+            if (answers.q1 === 'B') scores['E. Coli']++;
+            if (answers.q1 === 'C') { scores.Llama++; scores.Rabbit++; }
+            if (answers.q1 === 'D') scores['Brown Bat']++;
+            // Q2
+            if (answers.q2 === 'A') { scores['Pond Snail']++; scores['Zebra Finch']++; scores.Pigeon++; }
+            if (answers.q2 === 'B') { scores.DNA++; scores.RNA++; scores['C. Elegans']++; scores.Pufferfish++; }
+            if (answers.q2 === 'C') { scores.AAV++; scores.Antibody++; scores.Dog++; scores.Mouse++; scores.Pig++; }
+            if (answers.q2 === 'D') { scores['African Clawed Frog']++; scores['Sea Urchin']++; scores.Tomato++; scores.Orange++; }
+            // Q3
+            if (answers.q3 === 'A') { scores.Dog++; scores.Llama++; scores.Pig++; }
+            if (answers.q3 === 'B') { scores['C. Elegans']++; scores['Pond Snail']++; }
+            if (answers.q3 === 'C') { scores.AAV++; scores.Mouse++; }
+            if (answers.q3 === 'D') { scores['E. Coli']++; scores.Chicken++; scores.Rabbit++; }
+            // Q4
+            if (answers.q4 === 'A') { scores.Pufferfish++; scores['C. Elegans']++; }
+            if (answers.q4 === 'B') { scores.Mouse++; scores.Pig++; scores.Dog++; }
+            if (answers.q4 === 'C') { scores.Chicken++; scores.Rabbit++; scores.Llama++; }
+            if (answers.q4 === 'D') scores.AAV++;
+            // Q5
+            if (answers.q5 === 'A') { scores.Tomato++; scores.Orange++; scores['African Clawed Frog']++; }
+            if (answers.q5 === 'B') { scores.DNA++; scores.RNA++; scores['Sea Urchin']++; }
+            if (answers.q5 === 'C') { scores['Brown Bat']++; scores['Zebra Finch']++; scores.Pigeon++; }
+            if (answers.q5 === 'D') { scores.Axolotl++; scores.Antibody++; }
+             // Q6
+            if (answers.q6 === 'A') { scores['C. Elegans']++; scores['Pond Snail']++; scores['E. Coli']++; }
+            if (answers.q6 === 'B') { scores.Pig++; scores.Dog++; scores.Mouse++; scores['African Clawed Frog']++; }
+            if (answers.q6 === 'C') { scores.DNA++; scores.RNA++; scores.Pufferfish++; scores.Antibody++; }
+            if (answers.q6 === 'D') { scores.Tomato++; scores.Orange++; }
+            // Q7
+            if (answers.q7 === 'A') { scores['Zebra Finch']++; scores.Pigeon++; scores['Brown Bat']++; }
+            if (answers.q7 === 'B') { scores.Dog++; scores.Llama++; scores.Pig++; }
+            if (answers.q7 === 'C') { scores['E. Coli']++; scores.Chicken++; scores.Rabbit++; scores.AAV++; }
+            if (answers.q7 === 'D') { scores.DNA++; scores.RNA++; scores.Pufferfish++; scores['C. Elegans']++; }
+            // Q8
+            if (answers.q8 === 'A') { scores.AAV++; scores.Tomato++; scores.Orange++; }
+            if (answers.q8 === 'B') { scores.Mouse++; scores.Pig++; scores.Dog++; }
+            if (answers.q8 === 'C') { scores.DNA++; scores.RNA++; scores['C. Elegans']++; scores.Pufferfish++; }
+            if (answers.q8 === 'D') { scores.Axolotl++; scores.Llama++; scores.Rabbit++; scores.Chicken++; }
+            // Q9
+            if (answers.q9 === 'A') { scores['E. Coli']++; scores.AAV++; scores.Antibody++; }
+            if (answers.q9 === 'B') { scores['African Clawed Frog']++; scores['Sea Urchin']++; scores.Tomato++; scores.Orange++; }
+            if (answers.q9 === 'C') { scores.Pufferfish++; scores.Mouse++; scores.Dog++; }
+            if (answers.q9 === 'D') { scores.Pigeon++; scores['Zebra Finch']++; scores['Brown Bat']++; scores['Pond Snail']++; }
+            // Q10
+            if (answers.q10 === 'A') { scores.Pigeon++; scores['Brown Bat']++; }
+            if (answers.q10 === 'B') scores['Zebra Finch']++;
+            if (answers.q10 === 'C') { scores.DNA++; scores.RNA++; scores.Pufferfish++; scores['C. Elegans']++; }
+            if (answers.q10 === 'D') { scores['E. Coli']++; scores.Chicken++; scores.Rabbit++; scores.AAV++; scores.Axolotl++; }
+            // --- End Scoring Logic ---
+
+
+            let maxScore = 0;
+            for (const card in scores) {
+                if (scores[card] > maxScore) {
+                    maxScore = scores[card];
+                }
+            }
+
+            let winningCards = [];
+            for (const card in scores) {
+                if (scores[card] === maxScore && maxScore > 0) { // Ensure score is positive
+                    winningCards.push(card);
+                }
+            }
+
+            let resultHTML = "<h3>Your GENEWIZ Guardian(s):</h3>";
+            if (winningCards.length > 0) {
+                 winningCards.forEach(card => {
+                    resultHTML += `<p>${cardDescriptions[card]}</p>`;
+                 });
+            } else {
+                resultHTML += "<p>Hmm, couldn't determine a clear winner. Maybe try answering slightly differently?</p>";
+            }
+
+
+            resultDiv.innerHTML = resultHTML;
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' }); // Scroll to show the result
+        }
+    </script>
+
+</body>
+</html>
